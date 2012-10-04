@@ -9,7 +9,12 @@ class CurrentBid < ActiveRecord::Base
   
   private
     def update_bidding_log
-      @entry = BiddingLog.new(att self)
+      @entry = BiddingLog.new({ :parking_spot => self.parking_spot, 
+        :name => self.name, 
+        :email => self.email, 
+        :bid => self.bid, 
+        :max_bid => self.max_bid
+      })
       @entry.save
     end
     
