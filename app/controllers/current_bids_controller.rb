@@ -17,30 +17,30 @@ class CurrentBidsController < ApplicationController
 
   # GET /current_bids/1
   # GET /current_bids/1.json
-  def show
-    @current_bid = CurrentBid.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @current_bid }
-    end
-  end
+  # def show
+    # @current_bid = CurrentBid.find(params[:id])
+# 
+    # respond_to do |format|
+      # format.html # show.html.erb
+      # format.json { render json: @current_bid }
+    # end
+  # end
 
   # GET /current_bids/new
   # GET /current_bids/new.json
-  def new
-    @current_bid = CurrentBid.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @current_bid }
-    end
-  end
+  # def new
+    # @current_bid = CurrentBid.new
+# 
+    # respond_to do |format|
+      # format.html # new.html.erb
+      # format.json { render json: @current_bid }
+    # end
+  # end
 
   # GET /current_bids/1/edit
-  def edit
-    @current_bid = CurrentBid.find(params[:id])
-  end
+  # def edit
+    # @current_bid = CurrentBid.find(params[:id])
+  # end
 
   # POST /current_bids
   # POST /current_bids.json
@@ -90,31 +90,31 @@ class CurrentBidsController < ApplicationController
 
   # PUT /current_bids/1
   # PUT /current_bids/1.json
-  def update
-    @current_bid = CurrentBid.find(params[:id])
-
-    respond_to do |format|
-      if @current_bid.update_attributes(params[:current_bid])
-        format.html { redirect_to @current_bid, notice: 'Current bid was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @current_bid.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+    # @current_bid = CurrentBid.find(params[:id])
+# 
+    # respond_to do |format|
+      # if @current_bid.update_attributes(params[:current_bid])
+        # format.html { redirect_to @current_bid, notice: 'Current bid was successfully updated.' }
+        # format.json { head :no_content }
+      # else
+        # format.html { render action: "edit" }
+        # format.json { render json: @current_bid.errors, status: :unprocessable_entity }
+      # end
+    # end
+  # end
 
   # DELETE /current_bids/1
   # DELETE /current_bids/1.json
-  def destroy
-    @current_bid = CurrentBid.find(params[:id])
-    @current_bid.destroy
-
-    respond_to do |format|
-      format.html { redirect_to current_bids_url }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+    # @current_bid = CurrentBid.find(params[:id])
+    # @current_bid.destroy
+# 
+    # respond_to do |format|
+      # format.html { redirect_to current_bids_url }
+      # format.json { head :no_content }
+    # end
+  # end
   
   private
   
