@@ -2,7 +2,7 @@ class CurrentBidsController < ApplicationController
   # GET /current_bids
   # GET /current_bids.json
   def index
-    @current_bids = CurrentBid.order('id DESC').all
+    @current_bids = CurrentBid.order('id ASC').all
     @bids = {'Paladium' => [], 'Riverside' => []}
     @current_bids.each do |row|
       @location = row[:parking_spot][0..-3]
