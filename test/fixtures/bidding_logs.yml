@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location: MyString
+  spot: 1
+  name: MyString
+  email: MyString
+  max_bid: 1
+  placed_at: 2012-09-29 15:39:35
+
+two:
+  location: MyString
+  spot: 1
+  name: MyString
+  email: MyString
+  max_bid: 1
+  placed_at: 2012-09-29 15:39:35

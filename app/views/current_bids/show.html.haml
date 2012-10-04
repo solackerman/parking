@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Parking spot:
+  = @current_bid.parking_spot
+%p
+  %b Name:
+  = @current_bid.name
+%p
+  %b Email:
+  = @current_bid.email
+%p
+  %b Max bid:
+  = @current_bid.max_bid
+%p
+  %b Bid:
+  = @current_bid.bid
+
+= link_to 'Edit', edit_current_bid_path(@current_bid)
+\|
+= link_to 'Back', current_bids_path

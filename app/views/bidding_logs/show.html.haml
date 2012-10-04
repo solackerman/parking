@@ -1,0 +1,19 @@
+%p
+  %b Parking Spot:
+  = @bidding_log.parking_spot
+%p
+  %b Name:
+  = @bidding_log.name
+%p
+  %b Email:
+  = @bidding_log.email
+%p
+  %b Max bid:
+  = @bidding_log.max_bid
+%p
+  %b Placed at:
+  = @bidding_log.created_at.to_s.chomp " -0400"
+
+= link_to 'Edit', edit_bidding_log_path(@bidding_log)
+\|
+= link_to 'Back', bidding_logs_path

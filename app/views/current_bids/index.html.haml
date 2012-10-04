@@ -1,0 +1,39 @@
+%h1 Current Bids
+
+.row
+  .span6
+    %h2 Paladium
+    - @table_rows = @bids['Paladium']
+    = render 'table'
+
+  .span6
+    %h2 Riverside
+    - @table_rows = @bids['Riverside']
+    = render 'table'
+.row
+  .span12
+    = render 'form'
+-# %table
+  -# %tr
+    -# %th Parking spot
+    -# %th Name
+    -# %th Email
+    -# %th Max bid
+    -# %th Bid
+    -# %th
+    -# %th
+    -# %th
+-# 
+  -# - @current_bids.each do |current_bid|
+    -# %tr
+      -# %td= current_bid.parking_spot
+      -# %td= current_bid.name
+      -# %td= current_bid.email
+      -# %td= current_bid.max_bid
+      -# %td= current_bid.bid
+      -# %td= link_to 'Show', current_bid
+      -# %td= link_to 'Edit', edit_current_bid_path(current_bid)
+      -# %td= link_to 'Destroy', current_bid, method: :delete, data: { confirm: 'Are you sure?' }
+-# 
+-# %br
+-# = link_to 'Place Bid', new_current_bid_path, :class => 'btn btn-primary'

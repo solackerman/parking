@@ -1,0 +1,2 @@
+module BiddingLogsHelper
+end

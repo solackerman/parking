@@ -1,0 +1,28 @@
+= form_for @bidding_log do |f|
+  - if @bidding_log.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@bidding_log.errors.count, "error")} prohibited this bidding_log from being saved:"
+      %ul
+        - @bidding_log.errors.full_messages.each do |msg|
+          %li= msg
+          
+  -# .field
+    -# = f.label :location
+    -# = f.text_field :location
+  .field
+    = f.label :parking_spot
+    = f.select :parking_spot, ['Paladium 1', 'Paladium 2', 'Paladium 3', 'Paladium 4', 'Riverside 1', 'Riverside 2', 'Riverside 3', 'Riverside 4','Riverside 5', 'Riverside 6', 'Riverside 7']
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :max_bid
+    = f.number_field :max_bid
+  -# .field
+    -# = f.label :placed_at
+    -# = f.datetime_select :placed_at
+  .actions
+    = f.submit 'Save'

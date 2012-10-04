@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  parking_spot: MyString
+  name: MyString
+  email: MyString
+  max_bid: 1
+  bid: 1
+
+two:
+  parking_spot: MyString
+  name: MyString
+  email: MyString
+  max_bid: 1
+  bid: 1

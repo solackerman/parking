@@ -1,0 +1,48 @@
+/.page-header
+%h1 Bidding Logs
+
+.row
+  .span6
+    %h2 Paladium
+    %h3 1
+    - @table_rows = @bids['Paladium 1']
+    = render 'table'
+    %h3 2
+    - @table_rows = @bids['Paladium 2']
+    = render 'table'
+    %h3 3
+    - @table_rows = @bids['Paladium 3']
+    = render 'table'
+    %h3 4
+    - @table_rows = @bids['Paladium 4']
+    = render 'table'
+
+  .span6
+    %h2 Riverside
+    %h3 1
+    - @table_rows = @bids['Riverside 1']
+    = render 'table'
+    %h3 2
+    - @table_rows = @bids['Riverside 2']
+    = render 'table'
+    %h3 3
+    - @table_rows = @bids['Riverside 3']
+    = render 'table'
+    %h3 4
+    - @table_rows = @bids['Riverside 4']
+    = render 'table'
+    %h3 5
+    - @table_rows = @bids['Riverside 5']
+    = render 'table'
+    %h3 6
+    - @table_rows = @bids['Riverside 6']
+    = render 'table'
+    %h3 7
+    - @table_rows = @bids['Riverside 7']
+    = render 'table'
+
+/ = link_to 'Place Bid', new_bidding_log_path, :class => 'btn btn-primary pull-right'
+
+%br
+%br
+
