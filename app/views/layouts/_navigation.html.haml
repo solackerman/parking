@@ -1,5 +1,5 @@
-= link_to "IBM Ottawa ECF Parking Space Auction 2012", "#", :class => 'brand'
+= link_to "IBM Ottawa ECF Parking Space Auction 2012", "/", :class => 'brand', :style => "color: #1F70C1"
 .nav-collapse.collapse
-  %ul.nav.pull-right
-    %li.active  
-      =link_to "Time Left: "
+  %ul.nav.pull-right{:style => "margin: 0"}
+    %li
+      %a{:id => "timer", :style =>"padding-right:0; color: white"}

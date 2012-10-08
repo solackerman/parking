@@ -5,6 +5,18 @@ class CurrentBid < ActiveRecord::Base
     ['Paladium 1', 'Paladium 2', 'Paladium 3', 'Paladium 4', 'Riverside 1', 'Riverside 2', 'Riverside 3', 'Riverside 4','Riverside 5', 'Riverside 6', 'Riverside 7']
   end
   
+  def self.raffle_spots
+    ["Paladium 3", "Paladium 4", "Riverside 5", "Riverside 6", "Riverside 7"]
+  end
+  
+  def self.auction_spots
+    ['Paladium 1', 'Paladium 2', 'Riverside 1', 'Riverside 2', 'Riverside 3', 'Riverside 4']
+  end
+  
+  def self.end_time
+    Time.new(2012, "oct", 31, 15, 0, 0)
+  end
+  
   after_update :update_bidding_log
   
   private
@@ -17,16 +29,5 @@ class CurrentBid < ActiveRecord::Base
       })
       @entry.save
     end
-    
-      private
-  
-    def att o
-      { :parking_spot => o.parking_spot, 
-        :name => o.name, 
-        :email => o.email, 
-        :bid => o.bid, 
-        :max_bid => o.max_bid
-      }  
-    end 
   
 end

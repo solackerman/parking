@@ -1,29 +1,16 @@
-= form_for @current_bid do |f|
-  - if @current_bid.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@current_bid.errors.count, "error")} prohibited this current_bid from being saved:"
-      %ul
-        - @current_bid.errors.full_messages.each do |msg|
-          %li= msg
+= form_for CurrentBid.new do |f|
 
   .form-inline
-    -#= f.label :parking_spot
-    = f.select :parking_spot, CurrentBid.all_spots
-    -# .field
-    -# = f.label :name
+  
+    = f.select :parking_spot, ["Your parking spot"].concat(CurrentBid.auction_spots)
+    
     = f.text_field :name, :placeholder => "Your Name", :class => "input-medium"
-    -# .field
-    -# = f.label :email
+    
     = f.text_field :email, :placeholder => "youremail@ca.ibm.com", :class => "input-medium"
-    -# .field
-    -# = f.label :max_bid
+    
     .input-prepend.input-append
       %span.add-on $
       = f.number_field :max_bid, :placeholder => "Your Maximum Bid", :class => "input-medium"
       %span.add-on .00 
-    -# .field
-    -# = f.label :bid
-    -# = f.number_field :bid
-    = f.submit 'Place Bid', :class => 'btn btn-primary', :style => "margin: 0 15px 0 15px"
     
-    = link_to "Bidding History", bidding_logs_path
+    = f.submit 'Place Bid', :class => 'btn btn-primary', :style => "margin: 0 15px 0 15px"

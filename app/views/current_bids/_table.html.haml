@@ -7,12 +7,9 @@
       %th Bid
   %tbody
   - @table_rows.each do |table_row|
-    %tr
-      -# %td= bidding_log.location + bidding_log.spot.to_s
+    %tr{:class => (CurrentBid.raffle_spots.include?(table_row.parking_spot) ? "show-40" : nil)} 
       %td= table_row.parking_spot[-1,1]
       %td= table_row.name
       %td= table_row.email
       %td= "$" + table_row.bid.to_s
-      -# %td
-        -# = link_to 'Edit', edit_bidding_log_path(bidding_log), :class => 'btn btn-mini'
-        -# =link_to 'Destroy', bidding_log, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-danger'
+     
