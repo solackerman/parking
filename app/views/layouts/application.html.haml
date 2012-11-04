@@ -20,6 +20,55 @@
         .content
           = render 'layouts/messages'
           = yield
+    %footer.footer
+      .container
+        .row
+          .span1
+            %p 
+              
+          .span4
+            %h4 Rent Details
+            %table.table-condensed
+              %tbody
+                %tr
+                  %td 
+                    %b Duration
+                  %td Nov. 1, 2012 - Oct. 31, 2013
+    
+                %tr
+                  %td
+                    %b Pay
+                  %td 
+                    Paladium: #{link_to 'Kristen Hicks', 'mailto:kristenh@ca.ibm.com'} or #{link_to 'Donna Hamilton', 'mailto:Donna_Hamilton@ca.ibm.com' } 
+                    %br
+                    Riverside: #{link_to 'Pankaj Sikka', 'mailto:Pankaj.Sikka@ca.ibm.com'} or #{link_to 'Peter Nightingale', 'mailto:Peter.Nightingale@ca.ibm.com'}
+
+          .span3
+            %p
+              
+          .span3
+            %h4 Questions
+            %table.table-condensed
+              %tbody
+                %tr
+                  %td 
+                    %b Paladium 
+                  %td
+                    =link_to 'Kristen Hicks', 'mailto:kristenh@ca.ibm.com'
+                %tr
+                  %td
+                    %b Riverside
+                  %td
+                    =link_to 'Pankaj Sikka', 'mailto:Pankaj.Sikka@ca.ibm.com'
+                %tr
+                  %td
+                    %b Web Admin 
+                  %td
+                    =link_to 'Sol Ackerman', 'mailto:solacker@ca.ibm.com' 
+          
+          .span1
+            %p
+
     /
       Javascripts
       \==================================================

@@ -2,15 +2,15 @@ class CurrentBid < ActiveRecord::Base
   attr_accessible :bid, :email, :max_bid, :name, :parking_spot
   
   def self.all_spots
-    ['Paladium 1', 'Paladium 2', 'Paladium 3', 'Paladium 4', 'Riverside 1', 'Riverside 2', 'Riverside 3', 'Riverside 4','Riverside 5', 'Riverside 6', 'Riverside 7']
+    ['Paladium 1', 'Paladium 2', 'Paladium 3', 'Paladium 4', 'Paladium 5','Riverside 1', 'Riverside 2', 'Riverside 3', 'Riverside 4','Riverside 5', 'Riverside 6', 'Riverside 7']
   end
   
   def self.raffle_spots
-    ["Paladium 3", "Paladium 4", "Riverside 5", "Riverside 6", "Riverside 7"]
+    [ "Paladium 4", "Paladium 5", "Riverside 5", "Riverside 6", "Riverside 7"]
   end
   
   def self.auction_spots
-    ['Paladium 1', 'Paladium 2', 'Riverside 1', 'Riverside 2', 'Riverside 3', 'Riverside 4']
+    ['Paladium 1', 'Paladium 2', "Paladium 3", 'Riverside 1', 'Riverside 2', 'Riverside 3', 'Riverside 4']
   end
   
   def self.end_time

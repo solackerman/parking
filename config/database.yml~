@@ -21,6 +21,5 @@ test:
 production:
   adapter: postgresql
   database: parking
-  min_messages: warning
   pool: 5
   timeout: 5000

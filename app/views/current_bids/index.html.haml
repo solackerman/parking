@@ -5,14 +5,14 @@
   .span6
     %h2 Paladium
     .thumbnail
-      %img{:src => "http://placehold.it/575x175"}
+      =image_tag "paladium.png"
     - @table_rows = @bids['Paladium']
     = render 'table'
 
   .span6
     %h2 Riverside
     .thumbnail
-      %img{:src => "http://placehold.it/575x175"}
+      =image_tag "riverside.png"
     - @table_rows = @bids['Riverside']
     = render 'table'
 
